@@ -6,15 +6,29 @@
  */
 
 #include "util/Logger.h"
+#include "controller/controllers/Controller.h"
+#include "controller/task/TaskCCR.h"
+#include <iostream>
+#include <QApplication>
 
 int main(int argc, char** argv) {
-	Timer* logTimer = new Timer();
+    QApplication app(argc, argv);
+    Timer* logTimer = new Timer();
 	Logger::initialize(true, true, logTimer);
 	Logger::trace("Logger initialized.");
 
 	Logger::trace("Began to work on project.");
 
-	Logger::close();
-	return 0;
+    Controller *testQueue = new Controller();
+
+    testQueue->initialize();
+
+    while(1){
+        testQueue->addTaskToQueue(new TaskCCR());
+        std::cout << "I've become so numb!!!!!!~" << std::endl;
+    }
+
+    Logger::close();
+    return app.exec();
 }
 

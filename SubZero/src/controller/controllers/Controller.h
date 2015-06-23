@@ -1,10 +1,14 @@
-/*  Created on: Jan 7, 2015
+/*
+ * Controller.h
+ *
+ *  Created on: Jan 7, 2015
  *      Author: mda
  */
 
 #ifndef CONTROLLER_H_
 #define CONTROLLER_H_
 
+<<<<<<< HEAD
 #include <QObject>
 #include <QQueue>
 #include <QThread>
@@ -89,6 +93,12 @@ class Controller : public QObject {
          * A mutex lock that will make our writes thread safe.
          */
         QMutex mutex;
+=======
+class Controller {
+public:
+	Controller();
+	virtual ~Controller();
+>>>>>>> bfa71d7228bacfb969db89ed7eca1c3741c0d18b
 };
 
 #endif /* CONTROLLER_H_ */

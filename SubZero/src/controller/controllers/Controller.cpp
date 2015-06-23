@@ -1,13 +1,13 @@
 /*
  * Controller.cpp
  *
- *  Created on: Mar 12, 2015
- *      Author: ed
+ *  Created on: Jan 7, 2015
+ *      Author: mda
  */
 
 #include "Controller.h"
-#include "ControllerThread.h"
 
+<<<<<<< HEAD
 #include <iostream>
 
 Controller::Controller(void){
@@ -39,4 +39,14 @@ void Controller::addTaskToQueue(Task *newTask)
     mutex.lock();
     taskList.enqueue(newTask);
     mutex.unlock();
+=======
+Controller::Controller() {
+	// TODO Auto-generated constructor stub
+
 }
+
+Controller::~Controller() {
+	// TODO Auto-generated destructor stub
+>>>>>>> bfa71d7228bacfb969db89ed7eca1c3741c0d18b
+}
+
